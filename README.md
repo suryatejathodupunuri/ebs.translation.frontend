@@ -1,29 +1,10 @@
-# **EBS Transliteration Front-End Application**
-Transliteration is the systematic process of converting text from one writing system to another, with an emphasis on accurately representing the phonetic sounds of the original language in the target script. This process maintains the pronunciation of words rather than their meanings, thereby facilitating the correct vocalization of terms across linguistic boundaries.Reading an unfamiliar language presents significant challenges. However, transliteration can facilitate comprehension by providing a means to approximate the original phonetic sounds.
+# **EBS Translation Front-End Application**
 # Technologies used
 React Js.  
 Tailwind CSS.  
 
 ## About the Project
-The EBS Transliteration Front-End Application enables users to transliterate text between 16 languages and their 240 combinations. These languages include:
-1. Assamese
-2. Bengali
-3. Bodo
-4. Gujarati
-5. Hindi
-6. Kannada
-7. Konkani
-8. Malayalam
-9. Marathi
-10. Nepali
-11. Oriya
-12. Punjabi
-13. Roman(Eng)  
-14. Tamil
-15. Telugu
-16. Urdu
-
-Users can enter text in one language and receive transliterated output in another selected language and get pronunciation across linguistic boundaries.
+The EBS Translation Front-End Application enables users to translate text between various languages.
 
 ## Installation
 Follow these steps to get the project up and running on your local machine.
@@ -41,19 +22,22 @@ Follow these steps to get the project up and running on your local machine.
 3. **Clone the GitHub repository:**
    - Clone the repository using Git:
      ```bash
-     git clone https://github.com/suryatejathodupunuri/ebs.transliteration
+     git clone https://github.com/suryatejathodupunuri/ebs.translation.frontend
      ```
 
 4. **Change directory:**
    - Navigate into the cloned project directory:
      ```bash
-     cd ebs.transliteration
+     cd ebs.translation.frontend
      ```
 
 5. **Install Tailwind CSS:**
-   - Install Tailwind CSS as a development dependency:
+   - Install Tailwind CSS as a development dependency and install react-tooltip,react-toastify and react-responsive :
      ```bash
      npm install -D tailwindcss
+     npm install react-responsive
+     npm install react-tooltip
+     npm install -- save react - toastify
      ```
 
 6. **Run the Project:**
@@ -65,8 +49,7 @@ Follow these steps to get the project up and running on your local machine.
   
   ---
 
-For backend functionality, please refer to [EBS Transliteration Backend Repository](https://github.com/suryatejathodupunuri/ebs_transliteration_backend).
-
+For backend functionality, please refer to [EBS Translation Backend Repository](https://github.com/suryatejathodupunuri/ebs.translation.backend).
 
 
 
