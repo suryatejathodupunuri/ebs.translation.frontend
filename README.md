@@ -56,4 +56,3 @@ For backend functionality, please refer to [EBS Translation Backend Repository](
 
 
 
-# ebs.translation.frontend
