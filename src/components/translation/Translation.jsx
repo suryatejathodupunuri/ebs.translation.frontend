@@ -4,7 +4,6 @@ import { FaFile } from "react-icons/fa";
 import { Tooltip } from "react-tooltip";
 import { ToastContainer, toast } from "react-toastify";
 
-
 const Translation = () => {
   // eslint-disable-next-line
   const [file, setFile] = useState(null);
@@ -14,8 +13,8 @@ const Translation = () => {
   const [inputLang, setInputLang] = useState("");
   const [outputLang, setOutputLang] = useState("");
   const [isLoading, setLoading] = useState(false);
-  const isUrdu = inputLang === "ur";
-  const isUrdu_o = outputLang === "ur";
+  const isUrdu = inputLang === "ur" || inputLang==="ks"|| inputLang==="sd";
+  const isUrdu_o = outputLang === "ur" || outputLang==="ks"|| outputLang==="sd";
 
   const clearData = () => {
     setFileContent("");
@@ -110,7 +109,7 @@ const Translation = () => {
     } catch (error) {
       console.error("Error:", error);
       setTimeout(() => {
-        toast.dismiss()
+        toast.dismiss();
         toast.error("Server down, Please try after sometime.");
       }, 1000);
     } finally {
@@ -129,8 +128,7 @@ const Translation = () => {
               <span className="flex flex-col items-center space-y-1">
                 <div className="text-center flex items-center justify-center rounded-l-md ">
                   <span className="text-gray-600 text-xl">
-                  <FaFile color="green" />
-
+                    <FaFile color="green" />
                   </span>
                   <p
                     data-tooltip-id="my-tooltip"
@@ -168,17 +166,24 @@ const Translation = () => {
                 </option>
                 <option value="as">Assamese</option>
                 <option value="bn">Bengali</option>
+                <option value="brx">Bodo</option>
+                <option value="doi">Dogri</option>
                 <option value="en">English</option>
                 <option value="gu">Gujarati</option>
                 <option value="hi">Hindi</option>
                 <option value="ks">Kashmiri</option>
                 <option value="kn">Kannada</option>
+                <option value="gom">Konkani</option>
                 <option value="ml">Malayalam</option>
+               {/* <option value="mni">Manipuri</option> */}
+                <option value="mai">Maithili</option>
                 <option value="mr">Marathi</option>
                 <option value="ne">Nepali</option>
                 <option value="or">Oriya</option>
                 <option value="pa">Punjabi</option>
-                <option value="sa">Santali</option>
+                <option value="sa">Sanskrit</option>
+                {/*<option value="sat">Santali</option>*/}
+                <option value="sd">Sindhi</option>
                 <option value="ta">Tamil</option>
                 <option value="te">Telugu</option>
                 <option value="ur">Urdu</option>
@@ -211,17 +216,24 @@ const Translation = () => {
                 </option>
                 <option value="as">Assamese</option>
                 <option value="bn">Bengali</option>
+                <option value="brx">Bodo</option>
+                <option value="doi">Dogri</option>
                 <option value="en">English</option>
                 <option value="gu">Gujarati</option>
                 <option value="hi">Hindi</option>
                 <option value="ks">Kashmiri</option>
                 <option value="kn">Kannada</option>
+                <option value="gom">Konkani</option>
                 <option value="ml">Malayalam</option>
+                {/*<option value="mni">Manipuri</option>*/}
+                <option value="mai">Maithili</option>
                 <option value="mr">Marathi</option>
                 <option value="ne">Nepali</option>
                 <option value="or">Oriya</option>
                 <option value="pa">Punjabi</option>
-                <option value="sa">Santali</option>
+                <option value="sa">Sanskrit</option>
+               {/* <option value="sat">Santali</option>*/}
+                <option value="sd">Sindhi</option>
                 <option value="ta">Tamil</option>
                 <option value="te">Telugu</option>
                 <option value="ur">Urdu</option>
@@ -310,9 +322,7 @@ const Translation = () => {
         <div className="flex justify space-x-4">
           <button
             onClick={() => {
-              setFileContent(
-                "Welcome to Translation system."
-              );
+              setFileContent("Welcome to Translation system.");
               setInputLang("en");
             }}
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
