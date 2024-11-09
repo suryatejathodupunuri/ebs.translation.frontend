@@ -82,7 +82,7 @@ const Translation = () => {
       toast.error("Please enter Source text");
       return;
     } else {
-      toast.info("fetching..", { autoClose: 1500 });
+      toast.info("fetching..", { autoClose: 15000 });
     }
 
     setLoading(true);
